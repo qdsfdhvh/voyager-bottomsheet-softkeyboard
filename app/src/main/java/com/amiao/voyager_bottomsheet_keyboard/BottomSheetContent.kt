@@ -64,15 +64,6 @@ fun BottomSheetContent() {
         CompositionLocalProvider(
             LocalBottomSheetNavigator provides bottomSheetNavigator
         ) {
-
-
-
-            fun onDismissRequest() {
-                scope.launch {
-
-                }
-            }
-
             BottomSheetDialog(
                 visible = bottomSheetNavigator.isShow,
                 onDismissRequest = {
@@ -83,7 +74,6 @@ fun BottomSheetContent() {
                 navigator.saveableState("bottomSheet", screen) {
                     BackHandler {
                         bottomSheetNavigator.hide()
-                        // onDismissRequest()
                     }
                     screen.Content()
                 }
