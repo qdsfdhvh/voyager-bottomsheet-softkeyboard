@@ -19,6 +19,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "voyager-bottomsheet-keyboard"
+rootProject.name = "voyager-bottomsheet-softkeyboard"
 include(":app")
  
